@@ -44,7 +44,7 @@ export default function ProductCard({ id, name, price, src, description, adicion
                 </Description>
             </ProductContents>
             <CardButton 
-                onClick={handleAdicionar} $primary={selected}
+                onClick={handleAdicionar} $primary={selected} disabled={selected}
             >
                 {!selected && <img src={shopcart} alt="shop" />}
                 {selected ? "Adicionado ao carrinho" : "Comprar"}
