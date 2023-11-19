@@ -4,7 +4,9 @@ export const Container = styled.div`
     height: 100px;
     background-color: #FFFFFF;
     border-radius: 8px;
+
     padding: 5px 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +17,6 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         gap: 8px;
-
         font-size: 13px;
         line-height: 17px;
         font-weight: 400;
@@ -27,6 +28,9 @@ export const Container = styled.div`
 
     div img {
         max-width: 60px;
+        @media (max-width: 375px) {
+            display: none;
+        }
     }
 
     p {
@@ -38,10 +42,12 @@ export const Container = styled.div`
 
 export const ButtonClose = styled.button`
     position: absolute;
-    top: 4%;
-    left: 94%;
+    top: 0%;
+    left: 100%;
     width: 18px;
     height: 18px;
+
+    transform: translate(-60%, -40%);
 
     display: flex;
     align-items: center;
@@ -79,6 +85,10 @@ export const Quantity = styled.div`
         justify-content: center;
 
         font-size: 16px;
+
+        @media (max-width: 375px) {
+            padding: 2px 8px;
+        }
     }
 
     .one {

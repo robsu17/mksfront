@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Navbar = styled.div`
     background-color: #0F52BA;
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     padding: 0px 65px;
 
@@ -14,6 +14,15 @@ export const Navbar = styled.div`
         display: flex;
         align-items: baseline;
         gap: 8px;
+    }
+
+    @media (max-width: 414px) {
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            align-items: center;
+        }
     }
 
     div h1 {

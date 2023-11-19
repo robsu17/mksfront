@@ -6,6 +6,7 @@ import cartSvg from '../assets/cart.svg'
 import ShopcartCard from './components/ShopcartCard'
 import { ProductType } from '../App'
 import { useState } from 'react'
+import { priceFormatter } from '../utils/formatter'
 
 interface PropsQtd {
     qtd: number
@@ -45,6 +46,7 @@ export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
                                 </DialogClose>
                             </DialogHeader>
                             <ProductsInCart>
+                                {!data.length && <p className='emptyCart'>Nenhum produto adicionado</p>}
                                 {data && data.map((product) => {
                                     return <ShopcartCard 
                                             key={product.id} 
@@ -60,7 +62,7 @@ export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
                         </Content>
                         <Price>
                             <p>Total:</p>
-                            <p>R$ {total + totalPrice}</p>
+                            <p>{priceFormatter.format(total + totalPrice)}</p>
                         </Price>
                         <FinalizarCompra>Finalizar compra</FinalizarCompra>    
                     </DialogContent>

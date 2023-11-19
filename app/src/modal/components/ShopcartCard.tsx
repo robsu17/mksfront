@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ButtonClose, Container, Quantity } from './ShopcartCardStyles'
+import { priceFormatter } from '../../utils/formatter'
 
 interface ShopcartCardProps {
     id: number
@@ -45,7 +46,7 @@ export default function ShopcartCard({ id, name, photo, price, removerProduct, a
                 <p>{contador}</p>
                 <button className='two' onClick={handleRem}>-</button>
             </Quantity>
-            <p>R$ {price}</p>
+            <p>{priceFormatter.format(parseFloat(price))}</p>
         </Container>
     )
 }

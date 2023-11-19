@@ -13,7 +13,6 @@ const contentShow = keyframes`
     }
 `
 
-
 export const DialogContent = styled(Dialog.Content)`
     background-color: #0F52BA;
     position: fixed;
@@ -32,6 +31,11 @@ export const DialogContent = styled(Dialog.Content)`
         transform: translate(-50%, -50%);
 
         border-radius: 8px;
+    }
+
+    @media (max-width: 414px) {
+        width: 100vw;
+        height: 60vh;
     }
 
     animation: ${contentShow} 100ms ease-in;
@@ -71,6 +75,10 @@ export const Button = styled.button`
 export const Content = styled.div`
     padding: 40px 40px;
     height: 100%;
+
+    @media (max-width: 375px) {
+        padding: 20px ;
+    }
 `
 
 export const FinalizarCompra = styled.button`
@@ -161,11 +169,16 @@ export const ProductsInCart = styled.div`
     gap: 10px;
     overflow-y: auto;
 
+    .emptyCart {
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+
     @media (max-width: 375px) {
-        max-height: 200px;
+        max-height: 250px;
     }
 
     @media (max-width: 414px) {
-        max-height: 400px;
+        max-height: 300px;
     }
 `

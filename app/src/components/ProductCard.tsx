@@ -4,6 +4,7 @@ import shopcart from '../assets/shop.svg'
 import { ProductType } from '../App'
 
 import { useState } from 'react'
+import { priceFormatter } from '../utils/formatter'
 
 interface CardProps {
     id: number
@@ -37,7 +38,7 @@ export default function ProductCard({ id, name, price, src, description, adicion
                 </ProductImgContainer>
                 <NameProduct>
                     <span>{name}</span>
-                    <div>R${price}</div>
+                    <div>{priceFormatter.format(parseFloat(price))}</div>
                 </NameProduct>
                 <Description>
                     <p>{description}</p>
