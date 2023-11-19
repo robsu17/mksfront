@@ -30,17 +30,19 @@ export const DialogContent = styled(Dialog.Content)`
         left: 50%;
         transform: translate(-50%, -50%);
 
-        border-radius: 8px;
+        border-radius: 0px;
     }
 
     @media (max-width: 500px) {
         width: 100vw;
         height: 70vh;
+        border-radius: 0px;
     }
 
     @media (max-width: 375px) {
         width: 100vw;
-        height: 70vh;
+        height: 80vh;
+        border-radius: 0px;
     }
 
     animation: ${contentShow} 100ms ease-in;
@@ -76,12 +78,12 @@ export const Button = styled.button`
         font-size: 18px;
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: 300px) {
         border-radius: 0;
     }
 
     @media (max-width: 500px) {
-        border-radius: 0;
+        border-radius: 0px;
     }
 
     @media (max-width: 700px) {
@@ -121,15 +123,15 @@ export const FinalizarCompra = styled.button`
     line-height: 15px;
 
     @media (max-width: 768px) {
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 0;
     }
 
     @media (max-width: 500px) {
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 0;
     }
 
     @media (max-width: 350px) {
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 0;
     }
 
     border: none;
@@ -207,8 +209,8 @@ export const ProductsInCart = styled.div`
         font-weight: 500;
     }
 
-    @media (max-width: 350px) {
-        max-height: 200px;
+    @media (max-width: 300px) {
+        max-height: 150px;
     }
 
     @media (max-width: 500px) {

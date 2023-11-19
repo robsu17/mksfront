@@ -52,6 +52,7 @@ export const ButtonClose = styled.button`
     left: 100%;
     width: 18px;
     height: 18px;
+    border: none;
 
     transform: translate(-60%, -40%);
 
