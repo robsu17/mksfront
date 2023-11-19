@@ -5,12 +5,14 @@ export const Container = styled.div`
     background-color: #FFFFFF;
     border-radius: 8px;
 
+    min-width: 150px;
+
     padding: 5px 10px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+   
     position: relative;
 
     div {
@@ -37,6 +39,10 @@ export const Container = styled.div`
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
+    }
+
+    .price {
+        min-width: 100px;
     }
 `
 
@@ -88,6 +94,11 @@ export const Quantity = styled.div`
 
         @media (max-width: 375px) {
             padding: 2px 8px;
+        }
+
+        @media (max-width: 414px) {
+            display: flex;
+            flex-direction: column;
         }
     }
 

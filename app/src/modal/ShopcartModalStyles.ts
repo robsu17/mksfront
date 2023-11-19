@@ -23,7 +23,7 @@ export const DialogContent = styled(Dialog.Content)`
     width: 485px;
     height: 100vh;
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
         width: 50vh;
         height: 80vh;
         top: 50%;
@@ -33,9 +33,14 @@ export const DialogContent = styled(Dialog.Content)`
         border-radius: 8px;
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: 500px) {
         width: 100vw;
-        height: 60vh;
+        height: 70vh;
+    }
+
+    @media (max-width: 375px) {
+        width: 100vw;
+        height: 70vh;
     }
 
     animation: ${contentShow} 100ms ease-in;
@@ -73,11 +78,19 @@ export const Button = styled.button`
 `
 
 export const Content = styled.div`
-    padding: 40px 40px;
+    padding: 20px 20px;
     height: 100%;
 
     @media (max-width: 375px) {
         padding: 20px ;
+    }
+
+    @media (max-width: 414px) {
+        padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 20px;
     }
 `
 
@@ -174,11 +187,15 @@ export const ProductsInCart = styled.div`
         font-weight: 500;
     }
 
-    @media (max-width: 375px) {
-        max-height: 250px;
+    @media (max-width: 350px) {
+        height: 200px;
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: 500px) {
+        height: 350px;
+    }
+
+    @media (max-width: 600px) {
         max-height: 300px;
     }
 `
