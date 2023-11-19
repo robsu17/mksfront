@@ -37,10 +37,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(produtosAdicionados)
-  }, [produtosAdicionados])
-
-  useEffect(() => {
     getProducts()
   }, [])
 

@@ -35,7 +35,7 @@ export default function ShopcartCard({ id, name, photo, price, removerProduct, a
 
     return (
         <Container>
-            <ButtonClose onClick={handleRemove}>X</ButtonClose>
+            <ButtonClose onClick={handleRemove}>x</ButtonClose>
             <div>
                 <img src={photo} alt={name} />
                 <p>{name}</p>

@@ -41,6 +41,7 @@ export const ButtonClose = styled.button`
     top: 4%;
     left: 94%;
     width: 18px;
+    height: 18px;
 
     display: flex;
     align-items: center;
@@ -50,6 +51,7 @@ export const ButtonClose = styled.button`
     background-color: black;
 
     color: white;
+    text-transform: uppercase;
 
     transition: background 0.2s;
     cursor: pointer;
@@ -68,10 +70,15 @@ export const Quantity = styled.div`
     
     button {
         border: none;
-        padding: 6px;
+        padding: 6px 8px;
         cursor: pointer;
         transition: background 0.2s;
         
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 16px;
     }
 
     .one {
@@ -90,6 +97,6 @@ export const Quantity = styled.div`
         text-align: center;
         vertical-align: middle;
         width: fit-content;
-        font-weight: 400;
+        padding: 4px;
     }
 `

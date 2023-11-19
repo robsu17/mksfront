@@ -17,21 +17,22 @@ const contentShow = keyframes`
 export const DialogContent = styled(Dialog.Content)`
     background-color: #0F52BA;
     position: fixed;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 100%;
+    transform: translate(-100%, -30%);
     
     width: 485px;
-
-    max-height: 100vh;
+    height: 100vh;
 
     @media (max-width: 768px) {
-        width: 300px;
-        height: 70vh;
-    }
+        width: 50vh;
+        height: 80vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    border-radius: 8px;
+        border-radius: 8px;
+    }
 
     animation: ${contentShow} 100ms ease-in;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -68,7 +69,7 @@ export const Button = styled.button`
 `
 
 export const Content = styled.div`
-    padding: 36px 50px;
+    padding: 40px 40px;
     height: 100%;
 `
 
@@ -82,11 +83,13 @@ export const FinalizarCompra = styled.button`
     color: white;
     padding: 30px;
 
-    border-radius: 0px 0px 8px 8px;
-
     font-size: 24px;
     font-weight: 700;
     line-height: 15px;
+
+    @media (max-width: 768px) {
+        border-radius: 0px 0px 8px 8px;
+    }
 
     border: none;
 
@@ -111,6 +114,10 @@ export const DialogClose = styled(Dialog.Close)`
 
     border-radius: 100%;
     border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     font-size: 16px;
     font-weight: 400;
@@ -153,4 +160,12 @@ export const ProductsInCart = styled.div`
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
+
+    @media (max-width: 375px) {
+        max-height: 200px;
+    }
+
+    @media (max-width: 414px) {
+        max-height: 400px;
+    }
 `
