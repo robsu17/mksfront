@@ -24,7 +24,7 @@ function App() {
     setProdutosAdicionados([...produtosAdicionados, data]);
   }
 
-  function handleRemoveProduct(id: number) {
+  function handleProductRemove(id: number) {
     const newListProduts = produtosAdicionados.filter(produto => produto.id !== id)
     setProdutosAdicionados(newListProduts);
   }
@@ -54,7 +54,7 @@ function App() {
           <ShopcartModal 
             qtd={produtosAdicionados.length} 
             data={produtosAdicionados} 
-            remover={handleRemoveProduct}
+            remover={handleProductRemove}
           />
       </Navbar>
       <Container>

@@ -5,6 +5,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import cartSvg from '../assets/cart.svg'
 import ShopcartCard from './components/ShopcartCard'
 import { ProductType } from '../App'
+import { useState } from 'react'
 
 interface PropsQtd {
     qtd: number
@@ -13,6 +14,12 @@ interface PropsQtd {
 }
 
 export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
+
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    function adicionaPrecoDeProdutoRepetido(price: number) {
+        setTotalPrice(totalPrice + price)
+    }
 
     const total = data.reduce(function(total, produtoAtual) {
         return total + parseFloat(produtoAtual.price)
@@ -46,13 +53,14 @@ export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
                                             photo={product.photo}
                                             price={product.price} 
                                             removerProduct={remover}
+                                            adicionaPreco={adicionaPrecoDeProdutoRepetido}
                                         />
                                 })}
                             </ProductsInCart>
                         </Content>
                         <Price>
                             <p>Total:</p>
-                            <p>R$ {total.toFixed(2)}</p>
+                            <p>R$ {total + totalPrice}</p>
                         </Price>
                         <FinalizarCompra>Finalizar compra</FinalizarCompra>    
                     </DialogContent>

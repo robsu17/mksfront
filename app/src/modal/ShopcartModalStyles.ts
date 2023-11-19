@@ -13,14 +13,26 @@ const contentShow = keyframes`
     }
 `
 
+
 export const DialogContent = styled(Dialog.Content)`
     background-color: #0F52BA;
     position: fixed;
-    top: 0;
-    left: 70%;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
     
     width: 485px;
-    height: 100vh;
+
+    max-height: 100vh;
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 70vh;
+    }
+
+    border-radius: 8px;
+
     animation: ${contentShow} 100ms ease-in;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
@@ -70,6 +82,8 @@ export const FinalizarCompra = styled.button`
     color: white;
     padding: 30px;
 
+    border-radius: 0px 0px 8px 8px;
+
     font-size: 24px;
     font-weight: 700;
     line-height: 15px;
@@ -115,7 +129,7 @@ export const DialogClose = styled(Dialog.Close)`
 
 export const DialogTitle = styled(Dialog.Title)`
     color: white;
-    font-size: 27px;
+    font-size: 24px;
 `
 
 export const Price = styled.div`

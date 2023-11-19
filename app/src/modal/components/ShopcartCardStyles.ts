@@ -58,3 +58,38 @@ export const ButtonClose = styled.button`
         background-color: #3d3d3d;
     }
 `
+
+export const Quantity = styled.div`
+    border: 1px solid #BFBFBF;
+    border-radius: 4px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    button {
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+        
+    }
+
+    .one {
+        border-radius: 4px 0px 0px 4px;
+    }
+
+    .two {
+        border-radius: 0px 4px 4px 0px;
+    }
+
+    button:hover {
+        background-color: #BFBFBF;
+    }
+
+    p {
+        text-align: center;
+        vertical-align: middle;
+        width: fit-content;
+        font-weight: 400;
+    }
+`
