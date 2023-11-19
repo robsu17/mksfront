@@ -124,6 +124,14 @@ export const FinalizarCompra = styled.button`
         border-radius: 0px 0px 8px 8px;
     }
 
+    @media (max-width: 500px) {
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    @media (max-width: 350px) {
+        border-radius: 0px 0px 8px 8px;
+    }
+
     border: none;
 
     transition: background 0.2s;
