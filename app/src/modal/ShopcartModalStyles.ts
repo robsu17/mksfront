@@ -75,6 +75,18 @@ export const Button = styled.button`
         font-weight: 700;
         font-size: 18px;
     }
+
+    @media (max-width: 350px) {
+        border-radius: 0;
+    }
+
+    @media (max-width: 500px) {
+        border-radius: 0;
+    }
+
+    @media (max-width: 700px) {
+        border-radius: 0;
+    }
 `
 
 export const Content = styled.div`
