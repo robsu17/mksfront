@@ -188,11 +188,11 @@ export const ProductsInCart = styled.div`
     }
 
     @media (max-width: 350px) {
-        height: 200px;
+        max-height: 200px;
     }
 
     @media (max-width: 500px) {
-        height: 350px;
+        max-height: 350px;
     }
 
     @media (max-width: 600px) {
