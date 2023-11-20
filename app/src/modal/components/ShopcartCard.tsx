@@ -9,14 +9,17 @@ interface ShopcartCardProps {
     price: string
     removerProduct: (id: number) => void
     adicionaPreco: (price: number) => void
+    removePreco: (price: number) => void
 }
 
-export default function ShopcartCard({ id, name, photo, price, removerProduct, adicionaPreco }: ShopcartCardProps) {
+export default function ShopcartCard({ id, name, photo, price, removerProduct, adicionaPreco, removePreco }: ShopcartCardProps) {
 
     const [contador, setContador] = useState(1)
 
     let preco = 0
     function handleRemove() {
+        const precoRemovido = parseFloat(price) * (contador - 1)
+        removePreco(precoRemovido)
         removerProduct(id)
     } 
 

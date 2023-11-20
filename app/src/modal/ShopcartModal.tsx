@@ -16,15 +16,21 @@ interface PropsQtd {
 
 export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
 
+    let totalValue = data.reduce(function(total, produtoAtual) {
+        return total + parseFloat(produtoAtual.price)
+    }, 0)
+
     const [totalPrice, setTotalPrice] = useState(0)
 
+    let total = totalValue + totalPrice
+    
     function adicionaPrecoDeProdutoRepetido(price: number) {
         setTotalPrice(totalPrice + price)
     }
 
-    const total = data.reduce(function(total, produtoAtual) {
-        return total + parseFloat(produtoAtual.price)
-    }, 0)
+    function removePrecoDeProdutoRepetido(price: number) {
+        setTotalPrice(totalPrice - price)
+    }
 
     return (
         <>
@@ -56,13 +62,14 @@ export default function ShopcartModal({qtd, data, remover}: PropsQtd) {
                                             price={product.price} 
                                             removerProduct={remover}
                                             adicionaPreco={adicionaPrecoDeProdutoRepetido}
+                                            removePreco={removePrecoDeProdutoRepetido}
                                         />
                                 })}
                             </ProductsInCart>
                         </Content>
                         <Price>
                             <p>Total:</p>
-                            <p>{priceFormatter.format(total + totalPrice)}</p>
+                            <p>{priceFormatter.format(total)}</p>
                         </Price>
                         <FinalizarCompra>Finalizar compra</FinalizarCompra>    
                     </DialogContent>
