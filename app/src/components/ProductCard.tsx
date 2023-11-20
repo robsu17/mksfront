@@ -16,8 +16,8 @@ interface CardProps {
 }
 
 export default function ProductCard({ id, name, price, src, description, adicionar }: CardProps) {
+    
     const [selected, setSelected] = useState(false)
-
 
     function handleAdicionar() {
         adicionar({

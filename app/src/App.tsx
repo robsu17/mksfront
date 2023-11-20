@@ -83,7 +83,7 @@ function App() {
           </Contents>
       </Container>
       <Footer>
-        <p>MKS sistemas © Todos os direitos reservados</p>
+        <p>MKS sistemas © Todos os direitos reservados - Desenvolvido por <a href="https://www.linkedin.com/in/robson-lima-ba5bb31a8" target="_blank">Robson Wendel</a></p>
       </Footer>
     </>
   )

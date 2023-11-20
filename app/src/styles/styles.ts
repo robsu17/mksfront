@@ -60,17 +60,26 @@ export const Button = styled.button`
 
 export const Footer = styled.footer`
     width: 100%;
-    padding: 9px;
+    padding: 12px;
     
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14.63px;
 
     background-color: #EEEEEE;
+
+    a {
+        text-decoration: none;
+        color: #0F52BA;
+    }
+
+    a:hover {
+        color: #1771fc;
+    }
 `
 
 export const Container = styled.div`
