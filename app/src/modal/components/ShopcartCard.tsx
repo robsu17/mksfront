@@ -45,9 +45,9 @@ export default function ShopcartCard({ id, name, photo, price, removerProduct, a
                 <p>{name}</p>
             </div>
             <Quantity>
-                <button className='one' onClick={handleAdd}>+</button>
+                <button className='one' onClick={handleRem}>-</button>
                 <p>{contador}</p>
-                <button className='two' onClick={handleRem}>-</button>
+                <button className='two' onClick={handleAdd}>+</button>
             </Quantity>
             <div className='price'>
                 <p>{priceFormatter.format(parseFloat(price))}</p>
