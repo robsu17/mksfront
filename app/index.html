@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
 
     <title>MKS Sistemas</title>
+
+    <link rel="manifest" href="../app/public/manifest.json"/>
+
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('pwabuilder-sw.js')
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
